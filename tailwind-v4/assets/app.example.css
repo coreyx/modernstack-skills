@@ -1,0 +1,77 @@
+/* Basic Tailwind v4 setup */
+@import 'tailwindcss';
+
+/* Custom theme configuration */
+@theme {
+	/* Custom colors using oklch */
+	--color-primary: oklch(60% 0.2 250);
+	--color-secondary: oklch(70% 0.15 180);
+	--color-accent: oklch(65% 0.25 30);
+	
+	/* Custom gray scale */
+	--color-gray-50: oklch(98.5% 0.01 255);
+	--color-gray-100: oklch(96% 0.02 255);
+	--color-gray-200: oklch(93% 0.03 255);
+	--color-gray-300: oklch(88% 0.04 255);
+	--color-gray-400: oklch(75% 0.05 255);
+	--color-gray-500: oklch(60% 0.06 255);
+	--color-gray-600: oklch(50% 0.05 255);
+	--color-gray-700: oklch(40% 0.04 255);
+	--color-gray-800: oklch(30% 0.03 255);
+	--color-gray-900: oklch(20% 0.02 255);
+	
+	/* Custom fonts */
+	--font-family-sans: 'Inter', system-ui, sans-serif;
+	--font-family-display: 'Satoshi', 'sans-serif';
+	--font-family-mono: 'Fira Code', monospace;
+	
+	/* Custom spacing */
+	--spacing-18: 4.5rem;
+	--spacing-22: 5.5rem;
+	
+	/* Custom breakpoints */
+	--breakpoint-xs: 475px;
+	--breakpoint-3xl: 1920px;
+	
+	/* Custom border radius */
+	--radius-4xl: 2rem;
+	
+	/* Custom shadows */
+	--shadow-glow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Manual content paths (if needed) */
+@source '../components/**/*.{js,jsx,ts,tsx,svelte}';
+@source '../app/**/*.{js,jsx,ts,tsx,svelte}';
+@source '../pages/**/*.{js,jsx,ts,tsx,svelte}';
+
+/* Custom utilities */
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+	
+	.scrollbar-hide {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+	
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+/* Custom components */
+@layer components {
+	.btn {
+		@apply px-4 py-2 rounded-lg font-medium transition-colors;
+	}
+	
+	.btn-primary {
+		@apply bg-primary text-white hover:bg-primary/90;
+	}
+	
+	.card {
+		@apply bg-white rounded-xl shadow-lg p-6;
+	}
+}

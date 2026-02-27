@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tailwind v4 Dynamic Utilities</title>
+</head>
+<body>
+	<!-- Dynamic Grid Columns -->
+	<div class="grid grid-cols-15 gap-4">
+		<!-- 15 columns work without configuration -->
+		<div class="col-span-3">Column 1</div>
+		<div class="col-span-12">Column 2</div>
+	</div>
+
+	<!-- Dynamic Spacing -->
+	<div class="w-17 h-23 mt-29 p-13">
+		<!-- Any spacing value works dynamically -->
+	</div>
+
+	<!-- Square Sizing with size-* -->
+	<div class="size-12 bg-blue-500 rounded-full">
+		<!-- Shorthand for w-12 h-12 -->
+	</div>
+
+	<!-- Data Attribute Variants -->
+	<button 
+		data-current="true" 
+		class="px-4 py-2 data-current:bg-blue-500 data-current:text-white"
+	>
+		Active Tab
+	</button>
+
+	<!-- Container Queries -->
+	<div class="@container">
+		<div class="grid @sm:grid-cols-2 @lg:grid-cols-3 @xl:grid-cols-4 gap-4">
+			<div class="@sm:text-lg @lg:text-xl">Responsive to container</div>
+		</div>
+	</div>
+
+	<!-- Max-width Container Queries -->
+	<div class="@container">
+		<div class="@max-md:hidden @md:block">
+			Hidden in small containers
+		</div>
+	</div>
+
+	<!-- 3D Transforms -->
+	<div class="rotate-x-45 translate-z-10 perspective-1000">
+		3D transformed element
+	</div>
+
+	<!-- Gradient Angles -->
+	<div class="bg-linear-45 from-blue-500 to-purple-500">
+		45-degree gradient
+	</div>
+
+	<!-- Gradient Interpolation Modes -->
+	<div class="bg-linear-to-r/oklch from-red-500 to-blue-500">
+		Gradient with oklch interpolation
+	</div>
+
+	<!-- Radial Gradients -->
+	<div class="bg-radial from-yellow-400 to-red-500">
+		Radial gradient
+	</div>
+
+	<!-- Conic Gradients -->
+	<div class="bg-conic from-blue-500 via-purple-500 to-pink-500">
+		Conic gradient
+	</div>
+
+	<!-- Starting Style Variant (CSS-only transitions) -->
+	<div class="starting:opacity-0 starting:scale-95 opacity-100 scale-100 transition-all">
+		Animates on mount
+	</div>
+
+	<!-- Not Variant -->
+	<div class="not-first:mt-4">
+		Margin top on all except first child
+	</div>
+
+	<!-- P3 Color Palette (oklch) -->
+	<div class="bg-blue-500 text-white">
+		More vivid colors on P3 displays
+	</div>
+
+	<!-- Custom Theme Variables -->
+	<div class="bg-primary text-white font-display">
+		Using custom theme variables
+	</div>
+
+	<!-- Dynamic Grid Rows -->
+	<div class="grid grid-rows-7 gap-2">
+		<!-- 7 rows work dynamically -->
+		<div>Row 1</div>
+		<div>Row 2</div>
+		<div>Row 3</div>
+		<div>Row 4</div>
+		<div>Row 5</div>
+		<div>Row 6</div>
+		<div>Row 7</div>
+	</div>
+
+	<!-- Combining Multiple Features -->
+	<div class="@container">
+		<article class="
+			size-64
+			@sm:size-80
+			@lg:size-96
+			bg-linear-135/oklch
+			from-primary
+			to-secondary
+			rounded-4xl
+			shadow-glow
+			data-featured:scale-105
+			not-last:mb-8
+			starting:opacity-0
+			transition-all
+		" data-featured="true">
+			Featured card with multiple v4 features
+		</article>
+	</div>
+</body>
+</html>
