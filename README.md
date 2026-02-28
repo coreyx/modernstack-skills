@@ -36,13 +36,15 @@ Agent skills are structured knowledge packages that help AI assistants like Kiro
 - Dynamic utilities without predefined values
 - Container queries, 3D transforms, and P3 colors
 
-### Authentication & Billing
+### Authentication
 
 **[Better Auth](./better-auth)** - Hybrid authentication system for modern applications
 - Email/password and social OAuth (Google, GitHub)
 - Admin and organization plugins
 - Convex integration
 - SvelteKit-optimized setup
+
+### Billing
 
 **[Autumn Integration](./autumn-integration)** - Billing and subscription management with Stripe
 - Product and subscription configuration
