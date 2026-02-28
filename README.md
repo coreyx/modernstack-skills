@@ -24,6 +24,12 @@ Agent skills are structured knowledge packages that help AI assistants like Kiro
 - Remote functions for type-safe client-server communication
 - State management patterns and component composition
 
+**[shadcn-svelte](./shadcn-svelte)** - Beautifully designed components built with Radix and Tailwind
+- Accessible and customizable UI components
+- Built on Bits UI (Radix for Svelte)
+- Copy-paste component architecture
+- Full TypeScript support with Svelte 5
+
 **[Tailwind CSS v4](./tailwind-v4)** - CSS-first utility framework with massive performance improvements
 - Zero-config setup with automatic content detection
 - CSS-first theme configuration with @theme directive
@@ -70,6 +76,7 @@ These skills are designed for use with Kiro, an AI-powered IDE. Import skills se
 4. Paste the URL to the specific skill folder you want:
    - Convex: `https://github.com/coreyx/modernstack-skills/tree/main/convex`
    - Svelte: `https://github.com/coreyx/modernstack-skills/tree/main/svelte`
+   - shadcn-svelte: `https://github.com/coreyx/modernstack-skills/tree/main/shadcn-svelte`
    - Tailwind v4: `https://github.com/coreyx/modernstack-skills/tree/main/tailwind-v4`
    - Better Auth: `https://github.com/coreyx/modernstack-skills/tree/main/better-auth`
    - Autumn: `https://github.com/coreyx/modernstack-skills/tree/main/autumn-integration`
